@@ -4,8 +4,18 @@ html, body {
   margin: 0px;
 }
 
+body{
+  background: url('../imgs/bg.jpg');
+  background-size: cover;
+  text-align: center;
+}
+
 canvas {
-  background: green;
+  background: url('../imgs/road.jpg');
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  margin-top:80px;
+  border: 2px solid black;
 }
 
 img {
