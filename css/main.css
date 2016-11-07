@@ -21,3 +21,35 @@ canvas {
 img {
   borde: 2px solid black;
 }
+
+.message{
+      height: 100%; /*0%*/
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      background-color: rgba(37,40,57, 0.9);
+      color: #f2b632;
+      overflow-x: hidden;
+      transition: 1.5s;
+}
+
+.red{
+  color: #FF0000;
+}
+
+.blue{
+  color: #0000FF;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.inside{
+  margin-top: 10%;
+}

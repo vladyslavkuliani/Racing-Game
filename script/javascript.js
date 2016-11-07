@@ -30,6 +30,18 @@ var flag1 = new Flag(Math.random()*(canvasW - 40), Math.random()*(canvasH - 80),
 var flag2 = new Flag(Math.random()*(canvasW - 40), Math.random()*(canvasH - 80), "blue");
 
 $(document).ready(function(){
+  $('.button').on('click', function(){
+    document.addEventListener("keydown", function (e) {
+    	keysDown[e.keyCode] = true;
+    }, false);
+
+    document.addEventListener("keyup", function (e) {
+    	delete keysDown[e.keyCode];
+    }, false);
+
+    $('.message').css('height', '0');
+  });
+
   appendCanvas();
   main();
 });
@@ -50,14 +62,6 @@ function appendCanvas(){
   $('body').append(canvas);
 }
 
-
-addEventListener("keydown", function (e) {
-	keysDown[e.keyCode] = true;
-}, false);
-
-addEventListener("keyup", function (e) {
-	delete keysDown[e.keyCode];
-}, false);
 
 function updatePosition(timeModifier){
 
@@ -206,7 +210,10 @@ function reset(flag){
   car2.y = canvasH/2-50;
   car2.rotate = 0;
   flag2.flagsCount = 0;
+
+  $('.message').css('height', '100%');
 }
+
 
 function main(){
   var currTimePoint = new Date();
